@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "595770795015",
+    "project_id": "anjelica-8ef29",
+    "storage_bucket": "anjelica-8ef29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595770795015:android:cc6a32237ba429bc7bf6a2",
+        "android_client_info": {
+          "package_name": "com.example.inventario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595770795015-ovj51jhjl4olv4vn82mgetc06t0mrdfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbFK02xvYKN-QoAlx4-7vD4jN4qHKHJQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595770795015-ovj51jhjl4olv4vn82mgetc06t0mrdfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPrincipal">
+
+
+    <TextView
+        android:id="@+id/label_menu"
+        android:textAlignment="center"
+        android:layout_marginTop="70dp"
+        android:textSize="28dp"
+        android:text="Menu principal"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_below="@id/label_menu"
+        android:background="@android:color/transparent"
+        android:id="@+id/linear_one"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/card_view_clientes"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:background="@drawable/background_color_button_writen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:foreground="?attr/selectableItemBackground"
+                        android:id="@+id/img_tickets"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        android:src="@drawable/ic_baseline_person_white"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+                        android:textColor="@color/white"
+                        android:text="Clientes"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_proveedores"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:background="@drawable/background_color_button_list_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:foreground="?attr/selectableItemBackground"
+                        android:id="@+id/img_manilla"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        android:src="@drawable/ic_baseline_provider_white"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+                        android:textColor="@color/white"
+                        android:text="Proveedores"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/linear_thow"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/linear_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_productos"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:background="@drawable/background_color_button_delete_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:foreground="?attr/selectableItemBackground"
+                        android:id="@+id/delete_tag"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        android:src="@drawable/ic_baseline_productos_white"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+                        android:textColor="@color/white"
+                        android:text="Productos"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_materia"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:background="@drawable/background_color_golden_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:foreground="?attr/selectableItemBackground"
+                        android:id="@+id/delete_tags"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        android:src="@drawable/ic_baseline_productos_white"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="32sp"
+                        android:textColor="@color/white"
+                        android:text="Materia Prima"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

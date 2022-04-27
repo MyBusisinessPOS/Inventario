@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroProductoActivity">
+
+    <TextView
+        android:id="@+id/label_producto"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:textColor="@color/purple_700"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro Producto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+
+    <EditText
+        android:text="Producto"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/et_registro_producto_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_producto">
+    </EditText>
+
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        android:id="@+id/textView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Ubicacioón: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_registro_producto_descripcion">
+
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner_registro_producto_unidad_medida"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/et_registro_producto_descripcion">
+    </Spinner>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/tv_ubicacion"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Unidad de medida: "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner_registro_producto_rack"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_ubicacion"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_registro_producto_unidad_medida">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/tv_tipo_producto"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tipo producto: "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ubicacion">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner_registro_producto_tipo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_tipo_producto"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_registro_producto_rack">
+    </Spinner>
+
+
+    <Button
+        android:id="@+id/button_registrar_producto"
+        android:layout_marginTop="8dp"
+        android:text="Registrar producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tipo_producto">
+
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

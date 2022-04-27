@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_producto_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Pruebas"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/ll_ubidacion"
+                android:layout_below="@+id/tv_producto_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Ubicación:"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_producto_ubicacion"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="8dp"
+                    android:text="5511223344"
+                    android:layout_below="@+id/tv_producto_ubucacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_unidad"
+                android:layout_below="@+id/ll_ubidacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Unidad:"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_producto_unidad"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="8dp"
+                    android:text="PIEZA"
+                    android:layout_below="@+id/tv_producto_unidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_tipo"
+                android:layout_below="@+id/ll_unidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Tipo:"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_producto_tipo"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="8dp"
+                    android:text="PIEZA"
+                    android:layout_below="@+id/tv_producto_tipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

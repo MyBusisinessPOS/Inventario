@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/background_color_button_delete_tag.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_lista_clientes.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_lista_productos.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_lista_proveedores.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_menu_principal.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_registro_cliente.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_registro_producto.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_registro_proveedor.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_registro_usuarios.xml" value="0.30052083333333335" />
+        <entry key="app/src/main/res/layout/item_clientes.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_productos.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_proveedor.xml" value="0.24722222222222223" />
+        <entry key="app/src/main/res/layout/item_rack.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/item_tipo.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/item_unidad_medida.xml" value="0.3328125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
