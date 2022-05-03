@@ -11,8 +11,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.inventario.R;
-import com.example.inventario.modelos.Cliente;
+import com.example.inventario.Utils.Utils;
 import com.example.inventario.modelos.Producto;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

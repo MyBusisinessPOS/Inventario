@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,18 +13,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.inventario.R;
 import com.example.inventario.modelos.Cliente;
+import com.example.inventario.modelos.Producto;
 import com.example.inventario.modelos.Proveedor;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterProveedores extends RecyclerView.Adapter<AdapterProveedores.Holder> {
+public class AdapterProveedores extends RecyclerView.Adapter<AdapterProveedores.Holder> implements Filterable {
 
     Context c;
     List<Proveedor> mData;
+    List<Proveedor> mDataFilter;
 
     public AdapterProveedores(Context c, List<Proveedor> mData) {
         this.c = c;
         this.mData = mData;
+        this.mDataFilter = mData;
     }
 
     @NonNull
@@ -34,16 +40,51 @@ public class AdapterProveedores extends RecyclerView.Adapter<AdapterProveedores.
 
     @Override
     public void onBindViewHolder(@NonNull AdapterProveedores.Holder holder, int position) {
-        holder.bind(mData.get(position));
+        holder.bind(mDataFilter.get(position));
     }
 
     @Override
     public int getItemCount() {
-        if (mData.size() > 0) {
-            return mData.size();
+        if (mDataFilter.size() > 0) {
+            return mDataFilter.size();
         } else {
             return 0;
         }
+    }
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                String filtro = constraint.toString();
+
+                if (filtro.isEmpty()){
+                    mDataFilter = mData;
+                }else {
+
+                    //TODO filtro productos
+                    List<Proveedor> filtroProveedor = new ArrayList<>();
+
+                    for (Proveedor row : mDataFilter){
+                        if (row.getNombre().toLowerCase().contains(filtro) || row.getProveedor().toLowerCase().contains(filtro) ){
+                            filtroProveedor.add(row);
+                        }
+                    }
+                    mDataFilter = filtroProveedor;
+                }
+
+                FilterResults results = new FilterResults();
+                results.values = mDataFilter;
+                return results;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                mDataFilter = (ArrayList<Proveedor>) results.values;
+                notifyDataSetChanged();
+            }
+        };
     }
 
     public class Holder extends RecyclerView.ViewHolder {

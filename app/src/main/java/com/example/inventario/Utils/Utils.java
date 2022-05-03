@@ -1,4 +1,4 @@
-package com.example.inventario;
+package com.example.inventario.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

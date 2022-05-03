@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inventario">
         <activity
+            android:name=".CreaProductoFinalActivity"
+            android:exported="true" />
+        <activity
             android:name=".ListaProductosActivity"
             android:exported="true" />
         <activity
             android:name=".ListaProveedoresActivity"
             android:exported="true" />
         <activity
-            android:name=".MenuPrincipal"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".RegistroProveedorActivity"
@@ -34,7 +37,7 @@
             android:name=".RegistroUsuariosActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MenuPrincipal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -3,12 +3,19 @@ package com.example.inventario;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.example.inventario.adapters.AdapterClientes;
 import com.example.inventario.adapters.AdapterProductos;
@@ -32,8 +39,68 @@ public class ListaProductosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_productos);
+        initToolBar();
         mData = new ArrayList<>();
         this.initControls();
+    }
+
+    private void initToolBar() {
+
+        Toolbar toolbar = findViewById(R.id.toolbar_productos);
+        toolbar.setTitle("Productos");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            getWindow().setStatusBarColor(getResources().getColor(R.color.purple_700));
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_lista_productos, menu);
+
+        final MenuItem searchMenuItem = menu.findItem(R.id.buscarProducto);
+        final SearchView searchView = (SearchView) searchMenuItem.getActionView();
+
+        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                // TODO Auto-generated method stub
+                if (!hasFocus) {
+                    searchMenuItem.collapseActionView();
+                    searchView.setQuery("", false);
+
+                }
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            @Override
+            public boolean onQueryTextSubmit(String arg0) {
+                // TODO Auto-generated method stub
+                //Intent intent = new Intent(MainActivity.this, ActivitySearchVideo.class);
+                //intent.putExtra("search", arg0);
+                //startActivity(intent);
+                //searchView.clearFocus();
+                mAdapter.getFilter().filter(arg0);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String arg0) {
+                // TODO Auto-generated method stub
+                mAdapter.getFilter().filter(arg0);
+                return false;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 
     private void initControls() {

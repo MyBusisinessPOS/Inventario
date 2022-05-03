@@ -1,4 +1,4 @@
-package com.example.inventario;
+package com.example.inventario.Utils;
 
 import android.app.Application;
 import android.content.Context;
